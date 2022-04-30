@@ -17,11 +17,10 @@ const Formulario = ({ guardarCategoria }) => {
   const [categoria, SelectNoticias] = useSelect("general", OPCIONES);
 
   // Submit al form, pasar categoria a la app.js
-
-  const buscarNoticias = e => {
-      e.preventDefault();
-      guardarCategoria(categoria)
-  }
+  const buscarNoticias = (e) => {
+    e.preventDefault();
+    guardarCategoria(categoria);
+  };
 
   return (
     <div className={`${styles.buscador} row`}>
